@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../skeleton.css">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="logo-search">
+                <div>
+                    <div></div>
+                </div>
+                <div>
+                    <div>
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div style="width: 10px;"></div>
+                    <div>
+                        <input type="text" placeholder="Search">
+                    </div>
+                </div>
+            </div>
+            <div class="page-links">
+                <a class="active" href="/">Home</a>
+                <a href="/">Tickets</a>
+                <a href="/">Events</a>
+                <a href="/">Issues</a>
+                <a href="/">Settings</a>
+            </div>
+            <div class="profile">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="six columns">
+                    <div class="card">
+                        <div></div>
+                        <canvas id="last-week-this-week"></canvas>
+                    </div>
+                </div>
+                <div class="six columns">
+                    <div class="card">
+                        <div></div>
+                        <canvas id="category-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="three columns">
+                    <div class="card">
+                        <div class="summary-card">
+                            <div>
+                                <div class="bold font24">23,000</div>
+                                <div class="font16">Total Tickets Sold</div>
+                            </div>
+                            <div>
+                                <i class="fab fa-buffer fa-2x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="three columns">
+                    <div class="card">
+                        <div class="summary-card">
+                            <div>
+                                <div class="bold font24">23,000</div>
+                                <div class="font16">Total Tickets Bought</div>
+                            </div>
+                            <div>
+                                <i class="fab fa-buffer fa-2x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="three columns">
+                    <div class="card">
+                        <div class="summary-card">
+                            <div>
+                                <div class="bold font24">23,000</div>
+                                <div class="font16">Total Events Created</div>
+                            </div>
+                            <div>
+                                <i class="far fa-calendar-alt fa-2x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="three columns">
+                    <div class="card">
+                        <div class="summary-card">
+                            <div>
+                                <div class="bold font24">23,000</div>
+                                <div class="font16">Total Tickets Sold</div>
+                            </div>
+                            <div>
+                                <i class="fab fa-buffer fa-2x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="four columns">
+                    <div class="card">
+                        <div>Recent Sales</div>
+                        <ol>
+                            <li>customer name</li>
+                            <li>quantity</li>
+                            <li>unit price</li>
+                            <li>total price</li>
+                        </ol>
+                    </div>
+
+                </div>
+
+                <div class="four columns">
+                    <div class="card">
+                        <div>Upcoming Events</div>
+                        <div>can be either the events created by the user or events the user plans to attend</div>
+                        <div>2 categories here</div>
+                    </div>
+                </div>
+
+                <div class="four columns">
+                    <div class="card">
+                        <div>Recent Events attended</div>
+                        <div>Events attended in the days that are in the past</div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="four columns">
+                    <div class="card">
+                        <div>Recent Ticket Transfers</div>
+                        <ul>
+                            <li>Ticket name</li>
+                            <li>date</li>
+                            <li>New ticket holder email</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div></div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="./chart.js"></script>
+</body>
+
+</html>
