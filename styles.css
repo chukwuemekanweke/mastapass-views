@@ -58,6 +58,9 @@ header .logo-search .fa-search {
 header .logo-search input {
     border: none;
     padding: 7px;
+    border-bottom-style: solid;
+    border-bottom-width: 0.5px;
+    border-bottom-color: gray;
 }
 
 header .logo-search input::placeholder {
@@ -87,7 +90,7 @@ header .profile > div:last-child {
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    background-color: #c81d25;
+    background-color: hsl(357, 75%, 45%);
     color: #fc3741;
 }
 
@@ -116,3 +119,16 @@ footer {
 .bold {
     font-weight: 700;
 }
+
+
+/* ffce70
+ffbf47
+fcae19
+cf8801
+a3cb00
+
+6283c5
+3e65b1
+204ea8
+0f388a
+092b6d */

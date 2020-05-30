@@ -10,12 +10,12 @@ var chart_area = new Chart(chart, {
             {
                 label: 'Last week',
                 data: [8, 0, 5, 15, 8, 3, 5],
-                backgroundColor: "cornflowerblue"
+                backgroundColor: "#3e65b1"
             },
             {
                 label: 'This week',
                 data: [4, 3, 5, 9, 8, 3, 2],
-                backgroundColor: "#c81d25"
+                backgroundColor: "#ffbf47"
             }
         ]
     },
@@ -38,7 +38,7 @@ var category_chart = new Chart(cart_chart, {
             {
                 label: 'Last week',
                 data: [8, 10, 5],
-                backgroundColor: ["#8A0707", "#151515", "#e9b872"]
+                backgroundColor: ["#3e65b1", "#6283c5", "#204ea8"]
             }
         ]
     },
