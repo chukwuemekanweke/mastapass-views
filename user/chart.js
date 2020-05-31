@@ -9,13 +9,13 @@ var chart_area = new Chart(chart, {
         datasets: [
             {
                 label: 'Last week',
-                data: [8, 0, 5, 15, 8, 3, 5],
+                data: [8, 1.3, 5, 15, 8, 3, 5],
                 backgroundColor: "#3e65b1"
             },
             {
                 label: 'This week',
                 data: [4, 3, 5, 9, 8, 3, 2],
-                backgroundColor: "#ffbf47"
+                backgroundColor: "#6283c5"
             }
         ]
     },
@@ -30,14 +30,14 @@ var chart_area = new Chart(chart, {
 var cart_chart = document.getElementById("category-chart")
 
 var category_chart = new Chart(cart_chart, {
-    type: 'pie',
+    type: 'line',
     responsive: true,
     data: {
-        labels: ['One', 'Two', 'Three'],
+        labels: ['Weddings', 'MeetUps', 'Birthdays'],
         datasets: [
             {
                 label: 'Last week',
-                data: [8, 10, 5],
+                data: [5000, 3200, 500],
                 backgroundColor: ["#3e65b1", "#6283c5", "#204ea8"]
             }
         ]
@@ -45,7 +45,31 @@ var category_chart = new Chart(cart_chart, {
     options: {
         title: {
             display: true,
-            text: 'Ticket Sales by categories'
+            text: 'Amount Ticket Sales by categories'
+        }
+    }
+})
+
+
+var cart_chart = document.getElementById("bought-category-chart")
+
+var category_chart = new Chart(cart_chart, {
+    type: 'pie',
+    responsive: true,
+    data: {
+        labels: ['Weddings', 'MeetUps', 'Birthdays'],
+        datasets: [
+            {
+                label: 'Last week',
+                data: [1000, 3200, 700],
+                backgroundColor: ["#ffbf47", "#cf8801", "#ffce70"]
+            }
+        ]
+    },
+    options: {
+        title: {
+            display: true,
+            text: 'Ticket bought by categories'
         }
     }
 })
