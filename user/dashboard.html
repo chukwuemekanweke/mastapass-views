@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../normalize.css">
     <link rel="stylesheet" href="../skeleton.css">
     <link rel="stylesheet" href="../styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-    <title>Dashboard</title>
+    <title>Welcome | Mastapass</title>
 </head>
 
 <body>
@@ -58,7 +58,8 @@
             </div>
             <div class="profile">
                 <div></div>
-                <div onclick="smallMenuButton()"></div>
+                <div class="hide-large profile-menu" onclick="smallMenuButton()"></div>
+                <div class="hide-small profile-menu"></div>
             </div>
         </div>
     </header>
@@ -93,7 +94,7 @@
                                 <div class="font16">Total Tickets Sold</div>
                             </div>
                             <div>
-                                <i class="fab fa-buffer fa-2x"></i>
+                                <i class="fas fa-coins fa-2x"></i>
                             </div>
                         </div>
                     </div>
@@ -106,7 +107,7 @@
                                 <div class="font16">Total Tickets Bought</div>
                             </div>
                             <div>
-                                <i class="fab fa-buffer fa-2x"></i>
+                                <i class="fas fa-wallet fa-2x"></i>
                             </div>
                         </div>
                     </div>
@@ -132,7 +133,7 @@
                                 <div class="font16">All Tickets Transfered</div>
                             </div>
                             <div>
-                                <i class="fab fa-buffer fa-2x"></i>
+                                <i class="far fa-list-alt fa-2x"></i>
                             </div>
                         </div>
                     </div>
@@ -146,64 +147,142 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="five columns">
-                    <div class="card">
-                        <canvas id="category-chart"></canvas>
-                    </div>
-                </div>
-                <div class="four columns">
-                    <div class="card"></div>
-                </div>
-                <div class="three columns">
-                    <div class="card"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <br>
-
-    <section>
-        <div class="container">
-            <div class="row">
                 <div class="four columns">
                     <div class="card">
-                        <div>Recent Sales</div>
-                        <ol>
-                            <li>customer name</li>
-                            <li>quantity</li>
-                            <li>unit price</li>
-                            <li>total price</li>
-                        </ol>
+                        <div class="bold font24">Recent Sales</div>
+                        <table>
+                            <tr class="font14">
+                                <th>Customer</th>
+                                <th>Qty</th>
+                                <th>Unit price</th>
+                                <th>Total</th>
+                            </tr>
+                            <tr>
+                                <td>Nnamani Ugochukwu</td>
+                                <td>2</td>
+                                <td>1,000</td>
+                                <td>2,000</td>
+                            </tr>
+                            <tr>
+                                <td>Andry Shevchenko</td>
+                                <td>1</td>
+                                <td>1,000</td>
+                                <td>1,000</td>
+                            </tr>
+                        </table>
                     </div>
 
                 </div>
 
                 <div class="four columns">
                     <div class="card">
-                        <div>Upcoming Events</div>
-                        <div>can be either the events created by the user or events the user plans to attend</div>
-                        <div>2 categories here</div>
+                        <div>
+                            <div>Total money realized</div>
+                            <div class="bold font24">&#8358;90,630</div>
+                        </div>
+                        <br>
+                        <canvas id="horizontal_chart"></canvas>
                     </div>
                 </div>
 
                 <div class="four columns">
                     <div class="card">
-                        <div>Recent Events attended</div>
-                        <div>Events attended in the days that are in the past</div>
+                        <div class="font24 bold">Upcoming Events</div>
+                        <table style="width:100%">
+                            <tr>
+                                <td>
+                                    <i class="fas fa-circle fa-sm" style="color:#3e65b1"></i>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div>Burna Boy Concert</div>
+                                        <div class="font14 bold">20th June, 20</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <i class="fas fa-circle fa-sm" style="color:#4a937b"></i>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div>Wedding Anniversary Celebration</div>
+                                        <div class="font14 bold">5th June, 20</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <i class="fas fa-circle fa-sm" style="color:#3e65b1"></i>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div>Buhari Times? If you like sleep</div>
+                                        <div class="font14 bold">20th June, 20</div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
             <br>
             <div class="row">
-                <div class="four columns">
+                <div class="six columns">
                     <div class="card">
-                        <div>Recent Ticket Transfers</div>
-                        <ul>
-                            <li>Ticket name</li>
-                            <li>date</li>
-                            <li>New ticket holder email</li>
-                        </ul>
+                        <div class="font24 bold">Recent Events attended</div>
+                        <table style="width:100%">
+                            <tr>
+                                <td>
+                                    <i class="fas fa-circle fa-sm" style="color:#f00"></i>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div>Burna Boy Concert</div>
+                                        <div class="font14 bold">20th June, 20</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <i class="fas fa-circle fa-sm" style="color:#f00"></i>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div>Wedding Anniversary Celebration</div>
+                                        <div class="font14 bold">5th June, 20</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <i class="fas fa-circle fa-sm" style="color:#f00"></i>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div>Buhari Times? If you like sleep</div>
+                                        <div class="font14 bold">20th June, 20</div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="six columns">
+                    <div class="card">
+                        <div class="font24 bold">Recent Ticket Transfers</div>
+                        <table style="width:100%">
+                            <tr class="font14">
+                                <th>Ticket Name</th>
+                                <th>New Ticket Owner</th>
+                                <th>Date</th>
+                            </tr>
+                            <tr>
+                                <td>Highlife music concert</td>
+                                <td>James Reinhard</td>
+                                <td>11 Jun, 20</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>

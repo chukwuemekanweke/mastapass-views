@@ -10,12 +10,12 @@ var chart_area = new Chart(chart, {
             {
                 label: 'Last week',
                 data: [8, 1.3, 5, 15, 8, 3, 5],
-                backgroundColor: "#3e65b1"
+                backgroundColor: "#bc5299"
             },
             {
                 label: 'This week',
                 data: [4, 3, 5, 9, 8, 3, 2],
-                backgroundColor: "#6283c5"
+                backgroundColor: "#1e3d69"
             }
         ]
     },
@@ -27,29 +27,6 @@ var chart_area = new Chart(chart, {
     }
 })
 
-var cart_chart = document.getElementById("category-chart")
-
-var category_chart = new Chart(cart_chart, {
-    type: 'line',
-    responsive: true,
-    data: {
-        labels: ['Weddings', 'MeetUps', 'Birthdays'],
-        datasets: [
-            {
-                label: 'Last week',
-                data: [5000, 3200, 500],
-                backgroundColor: ["#3e65b1", "#6283c5", "#204ea8"]
-            }
-        ]
-    },
-    options: {
-        title: {
-            display: true,
-            text: 'Amount Ticket Sales by categories'
-        }
-    }
-})
-
 
 var cart_chart = document.getElementById("bought-category-chart")
 
@@ -57,12 +34,11 @@ var category_chart = new Chart(cart_chart, {
     type: 'pie',
     responsive: true,
     data: {
-        labels: ['Weddings', 'MeetUps', 'Birthdays'],
+        labels: ['Weddings', 'MeetUps', 'Birthdays','Ashebi'],
         datasets: [
             {
-                label: 'Last week',
-                data: [1000, 3200, 700],
-                backgroundColor: ["#ffbf47", "#cf8801", "#ffce70"]
+                data: [1000, 1200, 700, 2050],
+                backgroundColor: ["#f4a300", "#cc5299", "#c83e6a", "#1e3d69"]
             }
         ]
     },
@@ -71,5 +47,20 @@ var category_chart = new Chart(cart_chart, {
             display: true,
             text: 'Ticket bought by categories'
         }
+    }
+})
+
+var horizontal_chart  = document.getElementById("horizontal_chart")
+var money_chart = new Chart(horizontal_chart, {
+    type:"horizontalBar",
+    responsive:true,
+    data: {
+        labels: ['Weddings', 'MeetUps', 'Birthdays', 'Ashebi'],
+        datasets: [
+            {
+                data: [1000, 1200, 700, 2050],
+                backgroundColor: ["#f4a300", "#cc5299", "#c83e6a", "#1e3d69"]
+            }
+        ]
     }
 })
