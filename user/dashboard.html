@@ -2,301 +2,307 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../normalize.css">
-    <link rel="stylesheet" href="../skeleton.css">
-    <link rel="stylesheet" href="../styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-    <title>Welcome | Mastapass</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../normalize.css">
+  <link rel="stylesheet" href="../skeleton.css">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <title>Welcome | Mastapass</title>
 </head>
 
 <body>
-    <smallmenu id="small-menu" class="close">
+  <smallmenu id="small-menu" class="close">
+    <div>
+      <div class="menu-sm">
+        <img src="../masta.jpeg" alt="" width="100px">
+        <a onclick="smallMenuButton()">
+          <i class="fas fa-times"></i>
+        </a>
+      </div>
+      <br>
+      <div class="menu-sm-links">
+        <a href="/">Home</a>
+        <a href="/">Tickets</a>
+        <a href="/">Event</a>
+        <a href="/">Issues</a>
+        <a href="/">Settings</a>
+      </div>
+    </div>
+  </smallmenu>
+  <header>
+    <div>
+      <div class="logo-search">
         <div>
-            <div class="menu-sm">
-                <img src="../masta.jpeg" alt="" width="100px">
-                <a onclick="smallMenuButton()">
-                    <i class="fas fa-times"></i>
-                </a>
-            </div>
-            <br>
-            <div class="menu-sm-links">
-                <a href="/">Home</a>
-                <a href="/">Tickets</a>
-                <a href="/">Event</a>
-                <a href="/">Issues</a>
-                <a href="/">Settings</a>
-            </div>
+          <img src="../mp.jpeg" alt="" width="30px">
         </div>
-    </smallmenu>
-    <header>
-        <div>
-            <div class="logo-search">
-                <div>
-                    <img src="../mp.jpeg" alt="" width="30px">
-                </div>
-                <div class="hide-small">
-                    <div>
-                        <div>
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <div style="width: 10px;"></div>
-                        <div>
-                            <input type="text">
-                        </div>
-                    </div>
-                </div>
+        <div class="hide-small">
+          <div>
+            <div>
+              <i class="fas fa-search"></i>
             </div>
-            <div class="page-links hide-small">
-                <a class="active" href="/">Home</a>
-                <a href="/">Tickets</a>
-                <a href="/">Events</a>
-                <a href="/">Issues</a>
-                <a href="/">Settings</a>
+            <div style="width: 10px;"></div>
+            <div>
+              <input type="text">
             </div>
-            <div class="profile">
-                <div></div>
-                <div class="hide-large profile-menu" onclick="smallMenuButton()"></div>
-                <div class="hide-small profile-menu"></div>
-            </div>
+          </div>
         </div>
-    </header>
-
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="six columns">
-                    <div class="card">
-                        <div></div>
-                        <canvas id="last-week-this-week"></canvas>
-                    </div>
-                </div>
-                <div class="six columns">
-                    <div class="card">
-                        <div></div>
-                        <canvas id="bought-category-chart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <br>
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="three columns">
-                    <div class="card">
-                        <div class="summary-card">
-                            <div>
-                                <div class="bold font24">107</div>
-                                <div class="font16">Total Tickets Sold</div>
-                            </div>
-                            <div>
-                                <i class="fas fa-coins fa-2x"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="three columns">
-                    <div class="card">
-                        <div class="summary-card">
-                            <div>
-                                <div class="bold font24">22</div>
-                                <div class="font16">Total Tickets Bought</div>
-                            </div>
-                            <div>
-                                <i class="fas fa-wallet fa-2x"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="three columns">
-                    <div class="card">
-                        <div class="summary-card">
-                            <div>
-                                <div class="bold font24">5</div>
-                                <div class="font16">Total Events Created</div>
-                            </div>
-                            <div>
-                                <i class="far fa-calendar-alt fa-2x"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="three columns">
-                    <div class="card">
-                        <div class="summary-card">
-                            <div>
-                                <div class="bold font24">23,000</div>
-                                <div class="font16">All Tickets Transfered</div>
-                            </div>
-                            <div>
-                                <i class="far fa-list-alt fa-2x"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <br>
-
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="four columns">
-                    <div class="card">
-                        <div class="bold font24">Recent Sales</div>
-                        <table>
-                            <tr class="font14">
-                                <th>Customer</th>
-                                <th>Qty</th>
-                                <th>Unit price</th>
-                                <th>Total</th>
-                            </tr>
-                            <tr>
-                                <td>Nnamani Ugochukwu</td>
-                                <td>2</td>
-                                <td>1,000</td>
-                                <td>2,000</td>
-                            </tr>
-                            <tr>
-                                <td>Andry Shevchenko</td>
-                                <td>1</td>
-                                <td>1,000</td>
-                                <td>1,000</td>
-                            </tr>
-                        </table>
-                    </div>
-
-                </div>
-
-                <div class="four columns">
-                    <div class="card">
-                        <div>
-                            <div>Total money realized</div>
-                            <div class="bold font24">&#8358;90,630</div>
-                        </div>
-                        <br>
-                        <canvas id="horizontal_chart"></canvas>
-                    </div>
-                </div>
-
-                <div class="four columns">
-                    <div class="card">
-                        <div class="font24 bold">Upcoming Events</div>
-                        <table style="width:100%">
-                            <tr>
-                                <td>
-                                    <i class="fas fa-circle fa-sm" style="color:#3e65b1"></i>
-                                </td>
-                                <td>
-                                    <div>
-                                        <div>Burna Boy Concert</div>
-                                        <div class="font14 bold">20th June, 20</div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <i class="fas fa-circle fa-sm" style="color:#4a937b"></i>
-                                </td>
-                                <td>
-                                    <div>
-                                        <div>Wedding Anniversary Celebration</div>
-                                        <div class="font14 bold">5th June, 20</div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <i class="fas fa-circle fa-sm" style="color:#3e65b1"></i>
-                                </td>
-                                <td>
-                                    <div>
-                                        <div>Buhari Times? If you like sleep</div>
-                                        <div class="font14 bold">20th June, 20</div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="six columns">
-                    <div class="card">
-                        <div class="font24 bold">Recent Events attended</div>
-                        <table style="width:100%">
-                            <tr>
-                                <td>
-                                    <i class="fas fa-circle fa-sm" style="color:#f00"></i>
-                                </td>
-                                <td>
-                                    <div>
-                                        <div>Burna Boy Concert</div>
-                                        <div class="font14 bold">20th June, 20</div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <i class="fas fa-circle fa-sm" style="color:#f00"></i>
-                                </td>
-                                <td>
-                                    <div>
-                                        <div>Wedding Anniversary Celebration</div>
-                                        <div class="font14 bold">5th June, 20</div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <i class="fas fa-circle fa-sm" style="color:#f00"></i>
-                                </td>
-                                <td>
-                                    <div>
-                                        <div>Buhari Times? If you like sleep</div>
-                                        <div class="font14 bold">20th June, 20</div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="six columns">
-                    <div class="card">
-                        <div class="font24 bold">Recent Ticket Transfers</div>
-                        <table style="width:100%">
-                            <tr class="font14">
-                                <th>Ticket Name</th>
-                                <th>New Ticket Owner</th>
-                                <th>Date</th>
-                            </tr>
-                            <tr>
-                                <td>Highlife music concert</td>
-                                <td>James Reinhard</td>
-                                <td>11 Jun, 20</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <footer>
+      </div>
+      <div class="page-links hide-small">
+        <a class="active" href="/">Home</a>
+        <a href="/">Tickets</a>
+        <a href="/">Events</a>
+        <a href="/">Issues</a>
+        <a href="/">Settings</a>
+      </div>
+      <div class="profile">
         <div></div>
-    </footer>
+        <div class="hide-large profile-menu" onclick="smallMenuButton()"></div>
+        <div class="hide-small profile-menu"></div>
+      </div>
+    </div>
+  </header>
 
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="../script.js"></script>
-    <script src="./chart.js"></script>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="six columns">
+          <div class="card">
+            <div></div>
+            <canvas id="last-week-this-week"></canvas>
+          </div>
+        </div>
+        <div class="six columns">
+          <div class="card">
+            <div></div>
+            <canvas id="bought-category-chart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="three columns">
+          <div class="card">
+            <div class="summary-card">
+              <div>
+                <div class="bold font24">107</div>
+                <div class="font16">Total Tickets Sold</div>
+              </div>
+              <div>
+                <i class="fas fa-coins fa-2x"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="three columns">
+          <div class="card">
+            <div class="summary-card">
+              <div>
+                <div class="bold font24">22</div>
+                <div class="font16">Total Tickets Bought</div>
+              </div>
+              <div>
+                <i class="fas fa-wallet fa-2x"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="three columns">
+          <div class="card">
+            <div class="summary-card">
+              <div>
+                <div class="bold font24">5</div>
+                <div class="font16">Total Events Created</div>
+              </div>
+              <div>
+                <i class="far fa-calendar-alt fa-2x"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="three columns">
+          <div class="card">
+            <div class="summary-card">
+              <div>
+                <div class="bold font24">23,000</div>
+                <div class="font16">All Tickets Transfered</div>
+              </div>
+              <div>
+                <i class="far fa-list-alt fa-2x"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <div class="front-three">
+            <div>
+              <div class="card">
+                <div class="bold font24">Recent Sales</div>
+                <table>
+                  <tr class="font14">
+                    <th>Customer</th>
+                    <th>Qty</th>
+                    <th>Unit price</th>
+                    <th>Total</th>
+                  </tr>
+                  <tr>
+                    <td>Nnamani Ugochukwu</td>
+                    <td>2</td>
+                    <td>1,000</td>
+                    <td>2,000</td>
+                  </tr>
+                  <tr>
+                    <td>Andry Shevchenko</td>
+                    <td>1</td>
+                    <td>1,000</td>
+                    <td>1,000</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+            <div>
+              <div class="card">
+                <div>
+                  <div>Total money realized</div>
+                  <div class="bold font24">&#8358;90,630</div>
+                </div>
+                <br>
+                <canvas id="horizontal_chart"></canvas>
+              </div>
+            </div>
+            <div>
+              <div class="card">
+                <div class="font24 bold">Upcoming Events</div>
+                <table style="width:100%">
+                  <tr>
+                    <td>
+                      <i class="fas fa-circle fa-sm" style="color:#3e65b1"></i>
+                    </td>
+                    <td>
+                      <div>
+                        <div>Burna Boy Concert</div>
+                        <div class="font14 bold">20th June, 20</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i class="fas fa-circle fa-sm" style="color:#4a937b"></i>
+                    </td>
+                    <td>
+                      <div>
+                        <div>Wedding Anniversary Celebration</div>
+                        <div class="font14 bold">5th June, 20</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i class="fas fa-circle fa-sm" style="color:#3e65b1"></i>
+                    </td>
+                    <td>
+                      <div>
+                        <div>Buhari Times? If you like sleep</div>
+                        <div class="font14 bold">20th June, 20</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="twelve columns">
+          <div class="front-two">
+            <div>
+              <div class="card">
+                <div class="font24 bold">Recent Events attended</div>
+                <table style="width:100%">
+                  <tr>
+                    <td>
+                      <i class="fas fa-circle fa-sm" style="color:#f00"></i>
+                    </td>
+                    <td>
+                      <div>
+                        <div>Burna Boy Concert</div>
+                        <div class="font14 bold">20th June, 20</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i class="fas fa-circle fa-sm" style="color:#f00"></i>
+                    </td>
+                    <td>
+                      <div>
+                        <div>Wedding Anniversary Celebration</div>
+                        <div class="font14 bold">5th June, 20</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i class="fas fa-circle fa-sm" style="color:#f00"></i>
+                    </td>
+                    <td>
+                      <div>
+                        <div>Buhari Times? If you like sleep</div>
+                        <div class="font14 bold">20th June, 20</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <div class="card">
+                <div class="font24 bold">Recent Ticket Transfers</div>
+                <table style="width:100%">
+                  <tr class="font14">
+                    <th>Ticket Name</th>
+                    <th>New Ticket Owner</th>
+                    <th>Date</th>
+                  </tr>
+                  <tr>
+                    <td>Highlife music concert</td>
+                    <td>James Reinhard</td>
+                    <td>11 Jun, 20</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div></div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="../script.js"></script>
+  <script src="./chart.js"></script>
 </body>
 
 </html>

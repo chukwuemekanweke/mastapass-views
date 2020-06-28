@@ -24,6 +24,8 @@ footer {
     background-color: white;
     padding:15px;
     border-radius: 3px;
+    height: 100%;
+    box-sizing: border-box;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.08);
 }
 
@@ -42,8 +44,33 @@ footer {
     font-weight: 700;
 }
 
+.front-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 35px;
+  grid-auto-rows: 1fr;
+}
+
+.front-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 35px;
+  grid-auto-rows: 1fr;
+}
+
+
 
 @media (max-width:768px){
+
+  .front-three {
+    grid-template-columns: 100%;
+    row-gap: 35px;
+  }
+
+  .front-two {
+    grid-template-columns: 100%;
+    row-gap: 35px;
+  }
 
     .hide-small {
         display: none;
@@ -78,33 +105,12 @@ footer {
         color: white;
         padding:10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+        transition: all 700ms ease-in-out;
     }
 
     smallmenu.open {
-        animation-name: open;
-        animation-duration: 700ms;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
+      top: 0;
     }
-
-    @keyframes open {
-        0% {
-            top:-500px;
-        }
-        100% {
-            top: 0px;
-        }
-    }
-
-    /* smallmenu.close {
-        animation-name: close;
-    }
-
-    @keyframes close {
-        100% {
-            top:-200px;
-        }
-    } */
 
     smallmenu .menu-sm {
         display: flex;
@@ -216,6 +222,42 @@ footer {
 }
 
 
+.active-section {
+  padding-top: 100px;
+  background-color: #fcfcfc;
+  padding-bottom: 100px;
+}
+
+.archived-section {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  background-color: #f5f5f5;
+}
+
+.active-section table, .archived-section table {
+  width: 100%;
+}
+
+.ticket-categories {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.ticket-categories > div {
+  margin-right: 15px;
+}
+
+.ticket-categories i {
+  margin-right: 5px;
+}
+
+.ticket-headers {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+
 /* ffce70
 ffbf47
 fcae19
@@ -227,9 +269,10 @@ a3cb00
 204ea8
 0f388a
 092b6d */
-#1e3d69
+/* #1e3d69
 #7d4282
 #cc5299
 #c83e6a
 #de7015
 #f4a300
+ */
