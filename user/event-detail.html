@@ -15,7 +15,7 @@
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-  <title>My Tickets | Mastapass</title>
+  <title>Eve weds Adam | Mastapass</title>
 </head>
 
 <body>
@@ -23,22 +23,57 @@
   <section>
     <div class="container">
       <div class="row">
-        <div class="eight columns">
-
-          banner and stuff
-        </div>
-        <div class="four columns">
-          <div>speakers</div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <div class="twelve columns">
-            <div id="mapid"></div>
+        <div class="twelve columns">
+          <div class="event-details-top">
+            <div class="event-details-banner" style="background-image: url(../health-worker.jpg);"></div>
+            <div>
+              <div class="headers">Eve weds Adam</div>
+              <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam repudiandae aliquam totam, quam tempore laboriosam iste reprehenderit eum, dolores vero provident eos vitae fugit suscipit officiis voluptatum. Aut, rem eius.</div>
+              <div class="row">
+                <div class="four columns">
+                  <div>May 20, 2020</div>
+                  <div>Start date</div>
+                </div>
+                <div class="four columns">
+                  <div>Jul 12, 2020</div>
+                  <div>End date</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="row">
+        <div class="twelve columns">
+          <div class="other-event-details-1">
+            <div class="card">Ticket Category</div>
+            <div class="card">Tickets</div>
+            <div class="card">Event Items</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="twelve columns">
+          <div class="other-event-details-2">
+            <div class="card">Event Schedule</div>
+            <div class="card">Event Performers</div>
+            <div class="card">Image gallery</div>
+          </div>
+        </div>
+      </div>
+
+        <div class="row">
+          <div class="twelve columns">
+            <div class="other-event-details-3">
+              <div class="card">
+                <div>Event Venue and map</div>
+                <div id="mapid"></div>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
   </section>
 
@@ -46,6 +81,10 @@
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="../script.js"></script>
   <script src="./chart.js"></script>
+
+  <script>
+    var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+  </script>
 </body>
 
 </html>

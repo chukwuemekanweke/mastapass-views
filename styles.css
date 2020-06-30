@@ -269,7 +269,63 @@ th, td {
   font-weight: 600;
 }
 
-#mapid { height: 180px; }
+#mapid {
+  height: 180px;
+  margin-top: 20px;
+}
+
+.event-details-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+}
+
+.event-details-banner {
+  background-size: cover;
+  height: 200px;
+}
+
+.other-event-details-1 {
+  margin-top: 75px;
+  display:grid;
+  grid-template-columns: 1fr;
+  row-gap: 25px;
+}
+
+.other-event-details-2 {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 25px;
+}
+
+.other-event-details-3 {
+  margin-top: 50px;
+}
+
+@media (min-width:768px){
+  .event-details-top {
+    grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  column-gap: 25px;
+  }
+
+  .event-details-banner {
+    height: 100%;
+  max-height: 250px;
+  }
+
+  .other-event-details-1 {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
+  }
+
+  .other-event-details-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    column-gap: 25px;
+  }
+}
 
 /* ffce70
 ffbf47
