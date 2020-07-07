@@ -327,6 +327,52 @@ th, td {
   }
 }
 
+.speaker {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  column-gap: 15px;
+  margin-top: 10px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #d1d1d1;
+  padding-bottom: 10px;
+}
+
+.speaker > div:first-child {
+  background-color: #3e65b1;
+  height: 30px;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.speaker a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #2e8ce4;
+}
+
+.img-placeholder {
+  height: 30px;
+  width: 30px;
+  background-color:#3eb157;
+  border-radius: 50%;
+}
+
+.img-gallery {
+  margin-top: 15px;
+}
+
+.img-gallery-item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-gallery .item {
+  height: 300px;
+}
+
+
 /* ffce70
 ffbf47
 fcae19
