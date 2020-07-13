@@ -5,6 +5,10 @@ body {
     background-color: #fcfcfc;
 }
 
+.no-overflow {
+  overflow: hidden;
+}
+
 header {
     box-sizing: border-box;
     padding-top: 10px;
@@ -20,7 +24,7 @@ footer {
     padding-bottom: 75px;
 }
 
-input, textarea {
+input, textarea, select {
   box-sizing: border-box;
   width: 100%;
 }
@@ -46,9 +50,6 @@ input, textarea {
 .font32 { font-size: 32px; }
 .text-center { text-align: center; }
 
-.bold {
-    font-weight: 700;
-}
 
 .front-three {
   display: grid;
@@ -416,8 +417,14 @@ th, td {
   }
 }
 
-.input-wrapper input{
+.input-wrapper input, .input-wrapper select{
   height: 50px;
+  padding:10px;
+  margin-top: 15px;
+  margin-bottom: 7px;
+}
+
+.input-wrapper textarea {
   padding:10px;
   margin-top: 15px;
   margin-bottom: 7px;
@@ -427,6 +434,27 @@ th, td {
   font-size: 21px;
 }
 
+.button {
+  border:none;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  height: 50px;
+  padding:10px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color:white;
+  background-color: #3e65b1;
+  box-shadow: 0 0 15px #e6e6e6;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+}
+
+.button:hover {
+  background-color: hsl(220, 48%, 40%);
+}
 
 /* ffce70
 ffbf47

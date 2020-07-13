@@ -25,6 +25,20 @@
 .ml2 { margin-left: 20px; }
 .mr2 { margin-right: 20px; }
 
+.mt5 { margin-top: 50px; }
+.mb5 { margin-bottom: 50px; }
+.ml5 { margin-left: 50px; }
+.mr5 { margin-right: 50px; }
+
 .w1 { width: 10px; }
 .w2 { width: 20px;}
+.w5 { width: 50px; }
 
+img.rounded-sm {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.semi-bold { font-weight: 600; }
+.bold { font-weight: 700; }
