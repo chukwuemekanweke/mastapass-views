@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-v4-grid-only@1.0.0/dist/bootstrap-grid.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <link rel="stylesheet" href="../assets/dropify/css/dropify.css">
+  <link rel="stylesheet" href="../assets/style.min.css">
+  <title>Create Air Travel Event | Mastapass</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <section>
+          <div class="font24 bold">Basic Info</div>
+          <div class="font16">Name your event and tell event-goers why they should come. Add details that highlight what
+            makes it unique.</div>
+
+          <div class="input-wrapper">
+            <input type="text" placeholder="Event name">
+          </div>
+
+          <div class="input-wrapper">
+            <input type="text" placeholder="Sub title">
+          </div>
+
+          <div class="input-wrapper">
+            <textarea placeholder="Description"></textarea>
+          </div>
+
+          <div class="mt2">
+            <div class="flex align-center justify-space-between">
+              <div class="bold font24">Event Images</div>
+              <div class="w2"></div>
+              <div>
+                <div class="add-details" onclick="modalControl('add-image')">
+                  <div class="flex align-center">
+                    <i class="fas fa-plus"></i>
+                    <div class="w1"></div>
+                    <div class="font16 bold">Add</div>
+                  </div>
+                </div>
+
+                <div id="add-image" class="modal">
+                  <div class="modal-body">
+                    <div>
+                      <div class="modal-content">
+                        <div class="flex justify-space-between">
+                          <div></div>
+                          <div class="modal-title">Add Event Image</div>
+                          <div class="close-modal" id="close-modal">
+                            <span onclick="modalControl('add-image')">&#10005;</span>
+                          </div>
+                        </div>
+                        <div class="mt2">
+                          <div>
+                            <input type="file" name="" id="" class="dropify">
+                          </div>
+                          <div>
+                            <button class="button">Add</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt1">
+              <div class="col-md-6">
+                <input type="file" name="" id="" class="dropify">
+              </div>
+              <div class="col-md-6">
+                <input type="file" name="" id="" class="dropify">
+              </div>
+            </div>
+          </div>
+
+          <div class="mt2">
+            <div class="flex align-center justify-space-between">
+              <div class="bold font24">Event Videos</div>
+              <div class="w2"></div>
+              <div>
+                <div class="add-details" onclick="modalControl('add-video')">
+                  <div class="flex align-center">
+                    <i class="fas fa-plus"></i>
+                    <div class="w1"></div>
+                    <div class="font16 bold">Add</div>
+                  </div>
+                </div>
+
+                <div id="add-video" class="modal">
+                  <div class="modal-body">
+                    <div>
+                      <div class="modal-content">
+                        <div class="flex justify-space-between">
+                          <div></div>
+                          <div class="modal-title">Add Event Video</div>
+                          <div class="close-modal" id="close-modal">
+                            <span onclick="modalControl('add-video')">&#10005;</span>
+                          </div>
+                        </div>
+                        <div class="mt2">
+                          <div>
+                            <input type="file" name="" id="" class="dropify">
+                          </div>
+                          <div>
+                            <button class="button">Add</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt1">
+              <div class="col-md-6">
+                <input type="file" name="" id="" class="dropify" data-allowed-file-extensions="mp4">
+              </div>
+              <div class="col-md-6">
+                <input type="file" name="" id="" class="dropify" data-allowed-file-extensions="mp4">
+              </div>
+            </div>
+          </div>
+
+          <div class="mt2">
+            <div class="flex align-center justify-space-between">
+              <div class="bold font24">Ticket Categories</div>
+              <div class="w2"></div>
+              <div>
+                <div class="add-details" onclick="modalControl('add-ticket-category')">
+                  <div class="flex align-center">
+                    <i class="fas fa-plus"></i>
+                    <div class="w1"></div>
+                    <div class="font16 bold">Add</div>
+                  </div>
+                </div>
+
+                <div id="add-ticket-category" class="modal">
+                  <div class="modal-body">
+                    <div>
+                      <div class="modal-content" id="modal-content">
+                        <div class="flex justify-space-between">
+                          <div></div>
+                          <div class="modal-title">Add Ticket Category</div>
+                          <div class="close-modal" id="close-modal">
+                            <span onclick="modalControl('add-ticket-category')">&#10005;</span>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="input-wrapper">
+                            <input type="text" placeholder="Name">
+                          </div>
+                          <div class="input-wrapper">
+                            <input type="text" placeholder="Price">
+                          </div>
+                          <div class="input-wrapper">
+                            <select>
+                              <option value="">Choose Fee Plan</option>
+                              <option>Absorb Fees</option>
+                              <option>Pass Fee On</option>
+                            </select>
+                          </div>
+                          <div class="input-wrapper">
+                            <select>
+                              <option value="">Choose Payment Type</option>
+                              <option>Free</option>
+                              <option>Paid</option>
+                              <option>Donation</option>
+                            </select>
+                          </div>
+                          <div class="input-wrapper">
+                            <input type="text" placeholder="Ticket Quantity">
+                          </div>
+                          <div class="input-wrapper">
+                            <input type="text" name="" id="ticket-sales-range" placeholder="Sales date range">
+                          </div>
+                          <div class="input-wrapper">
+                            <input type="text" id="ticket-use-range" placeholder="Usage date range">
+                          </div>
+                          <div>
+                            <button class="button">Add</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-wrapper">
+              <table>
+                <tr>
+                  <td>Free ticket</td>
+                  <td>#3,000</td>
+                  <td>Absorb Fees</td>
+                  <td>Free</td>
+                  <td>200</td>
+                  <td>
+                    <i onclick="modalControl('view-more-details')" class="fas fa-ellipsis-h"></i>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div id="view-more-details" class="modal">
+              <div class="modal-body">
+                <div>
+                  <div class="modal-content" id="modal-content">
+                    <div class="flex justify-space-between">
+                      <div></div>
+                      <div class="modal-title">Ticket Category</div>
+                      <div class="close-modal" id="close-modal">
+                        <span onclick="modalControl('view-more-details')">&#10005;</span>
+                      </div>
+                    </div>
+                    <div class="row mt2">
+                      <div class="col-md-4">
+                        <div class="font14">Category name</div>
+                        <div>Free for all</div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="font14">Price</div>
+                        <div>#3,000</div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="font14">Fee Plan</div>
+                        <div>Absorb Fees</div>
+                      </div>
+                    </div>
+                    <div class="row mt2">
+                      <div class="col-md-4">
+                        <div class="font14">Payment type</div>
+                        <div>Free</div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="font14">Quantity</div>
+                        <div>500</div>
+                      </div>
+                    </div>
+                    <div class="row mt2">
+                      <div class="col-md-6">
+                        <div class="font14">Ticket sales date range</div>
+                        <div>17 Jul, 20 <i class="fas fa-arrow-right"></i> 31 Jul, 20</div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="font14">Ticket usage date range</div>
+                        <div>17 Jul, 20 <i class="fas fa-arrow-right"></i> 31 Jul, 20</div>
+                      </div>
+                    </div>
+                    <div class="row mt2">
+                      <div class="col">
+                        <span class="bold" style="color:red;cursor:pointer;">Delete</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt5 mb5">
+          <div class="font24 bold">Travel Details</div>
+
+          <div class="input-wrapper">
+            <select class="chosen" data-placeholder="Departure...">
+              <option></option>
+              <option>Abia</option>
+            </select>
+          </div>
+          <div class="input-wrapper">
+            <select class="chosen" data-placeholder="Destination...">
+              <option></option>
+              <option>Abia</option>
+            </select>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" id="departure-date" placeholder="Departure date">
+          </div>
+          <div class="input-wrapper">
+            <input type="text" id="departure-time" placeholder="Departure time">
+          </div>
+
+          <div class="input-wrapper">
+            <select class="chosen" data-placeholder="Departure airport terminal...">
+              <option></option>
+              <option>Abia</option>
+            </select>
+          </div>
+
+          <div class="input-wrapper">
+            <select class="chosen" data-placeholder="Ticket type...">
+              <option></option>
+              <option>One Way Trip</option>
+              <option>Return ticket</option>
+            </select>
+          </div>
+
+
+        </section>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"
+    integrity="sha512-rMGGF4wg1R73ehtnxXBt5mbUfN9JUJwbk21KMlnLZDJh7BkPmeovBuddZCENJddHYYMkCh9hPFnPmS9sspki8g=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="../assets/main-min.js"></script>
+  <script src="../assets/dropify/js/dropify.js"></script>
+  <script>
+    $('.dropify').dropify();
+    $('.chosen').chosen()
+
+    $("#ticket-sales-range").flatpickr({
+      mode: "range",
+      dateFormat: "Y-m-d",
+      altInput: true,
+      altFormat: "F j, Y",
+      minDate: "today"
+    });
+
+    $("#ticket-use-range").flatpickr({
+      mode: "range",
+      dateFormat: "Y-m-d",
+      altInput: true,
+      altFormat: "F j, Y",
+      minDate: "today"
+    });
+
+    $("#departure-date").flatpickr({
+      dateFormat: "Y-m-d",
+      altInput: true,
+      altFormat: "F j, Y",
+      minDate: "today"
+    });
+
+    $("#departure-time").flatpickr({
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "H:i",
+      time_24hr: true
+    });
+
+  </script>
+</body>
+
+</html>

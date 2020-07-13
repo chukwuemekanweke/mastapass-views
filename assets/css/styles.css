@@ -469,6 +469,18 @@ th, td {
   }
 }
 
+.add-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#00438b;
+  box-sizing: border-box;
+  border-radius: 50%;
+  padding:8px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
 /* ffce70
 ffbf47
 fcae19
