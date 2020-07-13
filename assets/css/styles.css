@@ -456,6 +456,18 @@ th, td {
   background-color: hsl(220, 48%, 40%);
 }
 
+.simple-button {
+  border:none;
+  background-color: transparent;
+  border: 1px solid #333;
+  transition: all 500ms ease-in-out;
+}
+
+.simple-button:hover {
+  color: white;
+  background-color: #3e65b1;
+}
+
 .event-summary-ticket {
   display: grid;
   grid-template-columns: 1fr;
