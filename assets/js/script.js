@@ -30,3 +30,7 @@ function modalControl(modalId) {
     }, 100)
   }
 }
+
+/* window.addEventListener('click', function (e) {
+  if(document.getElementById())
+}) */

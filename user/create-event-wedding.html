@@ -226,6 +226,12 @@
           <div class="input-wrapper">
             <input type="text" placeholder="Address">
           </div>
+          <div class="input-wrapper">
+            <select class="chosen" data-placeholder="Choose venue...">
+              <option></option>
+              <option>Abia</option>
+            </select>
+          </div>
 
           <div class="mt5">
             <div class="flex">
@@ -384,6 +390,58 @@
             </div>
           </div>
 
+          <div class="mt5">
+            <div class="flex">
+              <div class="semi-bold">Attendees</div>
+              <div class="w2"></div>
+              <div>
+                <button onclick="modalControl('add-attendee')">
+                  <i class="fas fa-plus"></i>
+                </button>
+
+                <div id="add-attendee" class="modal">
+                  <div class="modal-body">
+                    <div>
+                      <div class="modal-content">
+                        <div class="flex justify-space-between">
+                          <div></div>
+                          <div class="modal-title">Add Attendee</div>
+                          <div class="close-modal" id="close-modal">
+                            <span onclick="modalControl('add-attendee')">&#10005;</span>
+                          </div>
+                        </div>
+                        <div class="mt2">
+                          <div class="input-wrapper">
+                            <input type="text" placeholder="Name">
+                          </div>
+                          <div class="input-wrapper">
+                            <input type="text" placeholder="Phone number">
+                          </div>
+                          <div>
+                            <button class="button">Add</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="table-wrapper">
+                <table>
+                  <tr>
+                    <td>Ugochukwu Cally Nnamani</td>
+                    <td>07017895599</td>
+                    <td>
+                      <i class="far fa-trash-alt"></i>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
         </div>
         <div class="col-md-3"></div>
       </div>
@@ -394,13 +452,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
     integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"
+    integrity="sha512-rMGGF4wg1R73ehtnxXBt5mbUfN9JUJwbk21KMlnLZDJh7BkPmeovBuddZCENJddHYYMkCh9hPFnPmS9sspki8g=="
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <script src="../script.js"></script>
-  <script src="./chart.js"></script>
+  <script src="../assets/main-min.js"></script>
   <script src="../assets/dropify/js/dropify.js"></script>
   <script>
     $('.dropify').dropify();
+    $('.chosen').chosen()
 
     $("#ticket-sales-range").flatpickr({
       mode: "range",

@@ -456,6 +456,19 @@ th, td {
   background-color: hsl(220, 48%, 40%);
 }
 
+.event-summary-ticket {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+@media (min-width: 768px){
+  .event-summary-ticket {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
 /* ffce70
 ffbf47
 fcae19
