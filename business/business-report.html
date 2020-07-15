@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/dropify/css/dropify.css">
   <link rel="stylesheet" href="../assets/style.min.css">
-  <title>Business Locations | Mastapass</title>
+  <title>Business Report | Mastapass</title>
 </head>
 
 <body>
@@ -20,9 +20,19 @@
         <div class="card">
           <div class="row">
             <div class="col-md-6 pt2 pb2">
-              <img src="../assets/df.png" class="rounded-sm" alt="business-logo">
-              <div class="font32 semi-bold">The Coca-Cola Company</div>
-              <div>cocacola@gmail.com</div>
+              <div class="flex align-center">
+                <img src="../assets/df.png" class="rounded-sm" alt="business-logo">
+                <div class="w2"></div>
+                <div>
+                  <div class="font32 semi-bold">The Coca-Cola Company</div>
+                  <div>cocacola@gmail.com</div>
+                </div>
+              </div>
+
+              <div class="mt2">
+                <div>Chukwuemeka Jeremiah</div>
+                <div>08167828970</div>
+              </div>
             </div>
             <div class="col-md-6"></div>
           </div>
@@ -30,71 +40,10 @@
       </div>
     </div>
 
-    <div class="row mt5">
-      <div class="col">
-        <div class="flex justify-space-between">
-          <div class="semi-bold">Locations</div>
-          <div>
-            <div class="add-details" onclick="modalControl('add-location')">
-              <div class="flex align-center">
-                <i class="fas fa-plus"></i>
-                <div class="w1"></div>
-                <div class="font16 bold">Add location</div>
-              </div>
-            </div>
-            <div id="add-location" class="modal">
-              <div class="modal-body">
-                <div>
-                  <div class="modal-content">
-                    <div class="flex justify-space-between">
-                      <div></div>
-                      <div class="modal-title">Add Location</div>
-                      <div class="close-modal" id="close-modal">
-                        <span onclick="modalControl('add-location')">&#10005;</span>
-                      </div>
-                    </div>
-                    <div class="mt2">
-                      <div>
-                        <input type="file" name="" id="" class="dropify">
-                      </div>
-                      <div class="input-wrapper">
-                        <input type="text" placeholder="Name">
-                      </div>
-                      <div class="input-wrapper">
-                        <input type="text" placeholder="Address">
-                      </div>
-                      <div class="input-wrapper">
-                        <input type="text" placeholder="Country">
-                      </div>
-                      <div class="input-wrapper">
-                        <input type="text" placeholder="State">
-                      </div>
-                      <div class="input-wrapper">
-                        <input type="text" placeholder="City">
-                      </div>
-                      <div class="input-wrapper">
-                        <input type="text" placeholder="Latitude">
-                      </div>
-                      <div class="input-wrapper">
-                        <input type="text" placeholder="Longitude">
-                      </div>
-                      <div>
-                        <button class="button">Add</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row mt2 mb5">
+    <div class="row mt5 mb5">
       <div class="col">
         <div class="business-locations">
-          <a href="#">
+          <a>
             <div class="flex flex-column justify-end" style="height:150px; background-image: url(../assets/df.png);">
               <div class="pt1 pb1 pl1 pr1 white-bg-fade-up">
                 <div class="font24">Lagos</div>
@@ -116,7 +65,7 @@
             </div>
           </a>
 
-          <a href="#">
+          <a>
             <div class="flex flex-column justify-end" style="height:150px; background-image: url(../assets/df.png);">
               <div class="pt1 pb1 pl1 pr1 white-bg-fade-up">
                 <div class="font24">Lagos</div>

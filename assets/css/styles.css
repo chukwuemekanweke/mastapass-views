@@ -422,12 +422,14 @@ th, td {
   padding:10px;
   margin-top: 15px;
   margin-bottom: 7px;
+  font-size: 18px;
 }
 
 .input-wrapper textarea {
   padding:10px;
   margin-top: 15px;
   margin-bottom: 7px;
+  font-size: 18px;
 }
 
 .file-icon p {
@@ -491,6 +493,24 @@ th, td {
   padding:8px;
   font-size: 10px;
   cursor: pointer;
+}
+
+.added-locations {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.added-locations > div {
+  background-color: white;
+  box-shadow: 0 0 20px #e0e0e0;
+}
+
+@media (min-width: 768px){
+  .added-locations {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* ffce70

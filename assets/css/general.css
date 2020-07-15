@@ -3,6 +3,7 @@
 .flex-column { flex-direction: column; }
 .justify-center { justify-content: center; }
 .justify-space-between { justify-content: space-between; }
+.justify-end { justify-content: flex-end; }
 .align-center { align-items: center; }
 
 .pt1 { padding-top: 10px; }
@@ -40,5 +41,8 @@ img.rounded-sm {
   border-radius: 50%;
 }
 
+.font-md { font-weight: 500; }
 .semi-bold { font-weight: 600; }
 .bold { font-weight: 700; }
+
+.cursor-pointer { cursor: pointer; }
