@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-v4-grid-only@1.0.0/dist/bootstrap-grid.css">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../normalize.css">
-  <link rel="stylesheet" href="../skeleton.css">
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../assets/style.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
   <title>My Tickets | Mastapass</title>
 </head>
@@ -17,17 +16,40 @@
   <section class="active-section">
     <div class="container">
       <div class="row">
-        <div class="twelve columns">
-          <div class="headers">Active tickets</div>
-
+        <div class="col-12">
           <div class="ticket-categories">
             <div>
               <i class="fas fa-circle fa-sm" style="color:#4a937b"></i>
-              <span>Concerts</span>
+              <span>Conference</span>
             </div>
             <div>
               <i class="fas fa-circle fa-sm" style="color:#007bff"></i>
               <span>Weddings</span>
+            </div>
+            <div>
+              <i class="fas fa-circle fa-sm" style="color:#333"></i>
+              <span>Travel</span>
+            </div>
+            <div>
+              <i class="fas fa-circle fa-sm" style="color:#fbff00"></i>
+              <span>Cinema</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt2">
+        <div class="twelve columns">
+          <div class="headers">Active tickets</div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <select>
+                <option>All</option>
+                <option>Conference</option>
+                <option>Weddings</option>
+                <option>Cinema</option>
+                <option>Travel</option>
+              </select>
             </div>
           </div>
 
@@ -61,20 +83,13 @@
                     </td>
                     <td>YH78MM</td>
                     <td>N5,000</td>
-                    <td>
-                      <div>
-                        <div>20 May, 20</div>
-                        <div>
-                          <a href="" style="font-size: 14px;">Adjust</a>
-                        </div>
-                      </div>
-                    </td>
+                    <td>20 May, 20</td>
                     <td>Python Conference</td>
                     <td>lorem</td>
                     <td>VI, Lagos</td>
                     <td>23 May, 20</td>
                     <td>
-                      <i class="fas fa-ellipsis-h"></i>
+                      <button>details</button>
                     </td>
                   </tr>
                 </tbody>
@@ -89,8 +104,42 @@
   <section class="archived-section">
     <div class="container">
       <div class="row">
+        <div class="col-12">
+          <div class="ticket-categories">
+            <div>
+              <i class="fas fa-circle fa-sm" style="color:#4a937b"></i>
+              <span>Conference</span>
+            </div>
+            <div>
+              <i class="fas fa-circle fa-sm" style="color:#007bff"></i>
+              <span>Weddings</span>
+            </div>
+            <div>
+              <i class="fas fa-circle fa-sm" style="color:#333"></i>
+              <span>Travel</span>
+            </div>
+            <div>
+              <i class="fas fa-circle fa-sm" style="color:#fbff00"></i>
+              <span>Cinema</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt2">
         <div class="twelve columns">
           <div class="headers">Archived tickets</div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <select>
+                <option>All</option>
+                <option>Conference</option>
+                <option>Weddings</option>
+                <option>Cinema</option>
+                <option>Travel</option>
+              </select>
+            </div>
+          </div>
 
           <br>
 
@@ -127,11 +176,16 @@
                   <td>VI, Lagos</td>
                   <td>23 May, 20</td>
                   <td>
-                    <i class="fas fa-ellipsis-h"></i>
+                    <button>details</button>
                   </td>
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="mt2 flex justify-center">
+            <button>Previous</button>
+            <div class="w2"></div>
+            <button>Next</button>
           </div>
         </div>
       </div>

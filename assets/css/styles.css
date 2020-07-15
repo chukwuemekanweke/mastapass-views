@@ -260,6 +260,7 @@ th, td {
   display: flex;
   flex-wrap: wrap;
   font-size: 14px;
+  justify-content: flex-end;
 }
 
 .ticket-categories > div {
@@ -434,6 +435,13 @@ th, td {
 
 .file-icon p {
   font-size: 21px;
+}
+
+button {
+  border:none;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgb(136, 136, 136);
 }
 
 .button {
