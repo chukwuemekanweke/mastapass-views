@@ -260,7 +260,6 @@ th, td {
   display: flex;
   flex-wrap: wrap;
   font-size: 14px;
-  justify-content: flex-end;
 }
 
 .ticket-categories > div {
@@ -442,6 +441,7 @@ button {
   background-color: white;
   border-radius: 5px;
   border: 1px solid rgb(136, 136, 136);
+  box-shadow: 0 0 10px rgb(243, 243, 243);
 }
 
 .button {
@@ -519,6 +519,20 @@ button {
   .added-locations {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.events-background-1 {
+  background: linear-gradient(#ffffffd9, #ffffffd9), url(../assets/img/to-do.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
+}
+
+.events-background-2 {
+  background: linear-gradient(#fafafad9, #ffffffd9), url(../assets/img/wedding.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
 }
 
 /* ffce70
