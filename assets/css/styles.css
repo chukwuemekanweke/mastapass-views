@@ -417,11 +417,14 @@ th, td {
   }
 }
 
+.input-wrapper {
+  margin-top: 15px;
+  margin-bottom: 7px;
+}
+
 .input-wrapper input, .input-wrapper select{
   height: 50px;
   padding:10px;
-  margin-top: 15px;
-  margin-bottom: 7px;
   font-size: 18px;
 }
 
@@ -533,6 +536,22 @@ button {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top right;
+}
+
+.login-form {
+  padding:20px;
+  border: 1px solid #ccc;
+}
+
+.profile-dp {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #00438b;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ffce70
