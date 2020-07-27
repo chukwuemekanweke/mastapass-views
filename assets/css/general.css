@@ -46,3 +46,17 @@ img.rounded-sm {
 .bold { font-weight: 700; }
 
 .cursor-pointer { cursor: pointer; }
+
+.relative {position: relative; }
+
+.profile-details-wrapper {
+  padding:50px 20px;
+  border: 1px solid #ccc;
+  top:-25px;
+}
+
+.profile-dp-wrapper {
+  z-index: 5;
+  bottom: -35px;
+  font-size: 21px;
+}

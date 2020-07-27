@@ -1,6 +1,6 @@
 
 body {
-    font-family: 'Manrope', sans-serif;
+  font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     background-color: #fcfcfc;
 }
@@ -457,7 +457,7 @@ button {
   font-size: 18px;
   font-weight: 500;
   color:white;
-  background-color: #3e65b1;
+  background-color: #2b2e5b;
   box-shadow: 0 0 15px #e6e6e6;
   margin-top: 15px;
   border-radius: 5px;
@@ -466,7 +466,7 @@ button {
 }
 
 .button:hover {
-  background-color: hsl(220, 48%, 40%);
+  background-color: hsl(236, 36%, 16%);
 }
 
 .simple-button {
@@ -544,14 +544,16 @@ button {
 }
 
 .profile-dp {
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
-  background-color: #00438b;
+  background-color: #2b2e5b;
   color:white;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 5px, 0.18);
 }
 
 /* ffce70
