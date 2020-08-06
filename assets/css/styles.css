@@ -441,10 +441,12 @@ th, td {
 
 button {
   border:none;
-  background-color: white;
+  background-color: hsl(236, 36%, 36%);
+  color: white;
   border-radius: 5px;
-  border: 1px solid rgb(136, 136, 136);
-  box-shadow: 0 0 10px rgb(243, 243, 243);
+  padding:5px;
+  border: 1px solid #2b2e5b;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 .button {
@@ -541,15 +543,19 @@ button {
 .login-form {
   padding:20px;
   border: 1px solid #ccc;
+  background-color: white;
 }
 
 .profile-dp {
-  height: 100px;
-  width: 100px;
+  position: relative;
+  height: 48px;
+  width: 48px;
   border-radius: 50%;
   background-color: #2b2e5b;
   color:white;
   display: flex;
+  justify-content: center;
+  font-size: 16px;
   justify-content: center;
   align-items: center;
   font-weight: 600;

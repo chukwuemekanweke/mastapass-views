@@ -52,11 +52,13 @@ img.rounded-sm {
 .profile-details-wrapper {
   padding:50px 20px;
   border: 1px solid #ccc;
-  top:-25px;
+  top:-30px;
+  border-radius: 5px;
+  background-color: white;
 }
 
 .profile-dp-wrapper {
-  z-index: 5;
-  bottom: -35px;
+  background-color: transparent;
   font-size: 21px;
+  padding:30px;
 }

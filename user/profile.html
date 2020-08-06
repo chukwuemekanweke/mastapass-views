@@ -21,29 +21,106 @@
 
           <div class="relative profile-dp-wrapper">
             <div class="flex justify-center mb2 mt5">
-              <div class="profile-dp">NC</div>
+
             </div>
           </div>
 
           <div class="relative profile-details-wrapper">
-            <div class="text-center font32">Nweke Chukwuemeka Jeremiah</div>
-
-            <div class="flex mt2 justify-center">
-              <div class="text-center">
-                <div class="font14">Email</div>
-                <div>name@email.com</div>
-              </div>
-              <div class="w2"></div>
-              <div class="text-center">
-                <div class="font14">Phone</div>
-                <div>07017895599</div>
-              </div>
+            <div class="flex justify-center">
+              <div class="profile-dp">NC</div>
             </div>
 
-            <div class="mt5 text-center">
-              <button>Edit profile</button>
+            <div class="text-center semi-bold font24">Nweke Jeremiah</div>
+
+            <div class="text-center mt2">
+              <div class="font14">
+                <i class="far fa-envelope fa-lg"></i>
+              </div>
+              <div>name@email.com</div>
+            </div>
+
+            <div class="text-center mt2">
+              <div class="font14">
+                <i class="fas fa-mobile-alt fa-lg"></i>
+              </div>
+              <div>07017895599</div>
+            </div>
+
+            <div class="mt5 flex justify-center text-center">
+              <button onclick="modalControl('change-password')">Reset Password</button>
+              <div class="w2"></div>
+              <button onclick="modalControl('edit-profile')">Edit Profile</button>
             </div>
           </div>
+
+
+          <div id="edit-profile" class="modal">
+            <div class="modal-body">
+              <div>
+                <div class="modal-content">
+                  <div class="flex justify-space-between">
+                    <div></div>
+                    <div class="modal-title">Edit Profile</div>
+                    <div class="close-modal" id="close-modal">
+                      <span onclick="modalControl('edit-profile')">&#10005;</span>
+                    </div>
+                  </div>
+
+                  <div class="mt2">
+                    <form action="">
+                      <div class="input-wrapper mt2 mb2">
+                        <input type="text" placeholder="Name">
+                      </div>
+                      <div class="input-wrapper mt2 mb2">
+                        <input type="text" placeholder="Email Address">
+                      </div>
+                      <div class="input-wrapper mt2 mb2">
+                        <input type="text" placeholder="Phone Number">
+                      </div>
+                      <div class="mt2 mb2">
+                        <button class="button">Update</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="change-password" class="modal">
+            <div class="modal-body">
+              <div>
+                <div class="modal-content">
+                  <div class="flex justify-space-between">
+                    <div></div>
+                    <div class="modal-title">Reset Password</div>
+                    <div class="close-modal" id="close-modal">
+                      <span onclick="modalControl('change-password')">&#10005;</span>
+                    </div>
+                  </div>
+
+                  <div class="mt2">
+                    <form action="">
+                      <div class="input-wrapper mt2 mb2">
+                        <input type="password" placeholder="Current Password">
+                      </div>
+                      <div class="input-wrapper mt2 mb2">
+                        <input type="password" placeholder="New Password">
+                      </div>
+                      <div class="input-wrapper mt2 mb2">
+                        <input type="password" placeholder="Re-type New Password">
+                      </div>
+                      <div class="mt2 mb2">
+                        <button class="button">Reset Password</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
         <div class="col-md-3"></div>
       </div>
