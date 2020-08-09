@@ -50,15 +50,19 @@ img.rounded-sm {
 .relative {position: relative; }
 
 .profile-details-wrapper {
-  padding:50px 20px;
   border: 1px solid #ccc;
-  top:-30px;
   border-radius: 5px;
   background-color: white;
 }
 
-.profile-dp-wrapper {
-  background-color: transparent;
-  font-size: 21px;
-  padding:30px;
+.profile-details-wrapper > div:first-child {
+  height: 100px;
+  background-color: #ccc;
+}
+
+.profile-details-wrapper > div:last-child {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
