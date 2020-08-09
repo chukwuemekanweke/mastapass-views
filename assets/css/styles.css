@@ -253,8 +253,13 @@ table {
 thead tr {
 background-color: #f2f2f2;
 }
+
 thead th {
   border: 1px solid #ccc;
+}
+
+thead tr th:first-child {
+  padding-left: 10px;
 }
 
 /* tbody tr:nth-child(even){background-color: #f1f1f1} */
@@ -272,10 +277,10 @@ tbody td {
   border: 1px solid #ccc;
 }
 
-th, td {
+/* th, td {
   text-align: left;
   padding: 8px;
-}
+} */
 
 .ticket-categories {
   display: flex;
@@ -570,14 +575,14 @@ button.simple-button {
 
 .profile-dp {
   position: relative;
-  height: 60px;
-  width: 60px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
   background-color: #2b2e5b;
   color:white;
   display: flex;
   justify-content: center;
-  font-size: 16px;
+  font-size: 18px;
   top:-50px;
   justify-content: center;
   align-items: center;

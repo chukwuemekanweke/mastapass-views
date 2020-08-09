@@ -47,6 +47,9 @@ img.rounded-sm {
 
 .cursor-pointer { cursor: pointer; }
 
+.text-decoration-none { text-decoration: none;}
+.link-color { color: #2b2e5b; }
+
 .relative {position: relative; }
 
 .profile-details-wrapper {
@@ -57,7 +60,8 @@ img.rounded-sm {
 
 .profile-details-wrapper > div:first-child {
   height: 100px;
-  background-color: #ccc;
+  background-color: rgb(250, 250, 250);
+  border-bottom: 1px solid #ccc;
 }
 
 .profile-details-wrapper > div:last-child {
