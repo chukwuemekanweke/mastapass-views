@@ -1,0 +1,31 @@
+
+.business-locations {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.business-locations > * {
+  background-color: white;
+  box-shadow: 0 0 20px #dbdbdb;
+  text-decoration: none;
+  color: #333;
+  border-radius: 5px;
+}
+
+.white-bg-fade-up {
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.514), transparent);
+}
+
+@media (min-width:768px){
+  .business-locations {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+.event-choose-wrapper {
+  display: grid; 
+  grid-template-columns: 20px auto 1fr;
+}
